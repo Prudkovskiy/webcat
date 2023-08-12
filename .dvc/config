@@ -1,0 +1,5 @@
+[core]
+    remote = mls3
+['remote "mls3"']
+    url = s3://bucket777/dvc
+    endpointurl = https://storage.yandexcloud.net
