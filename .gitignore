@@ -119,6 +119,9 @@ celerybeat.pid
 # Mac OS-specific storage files
 .DS_Store
 
+# VS Code
+.vscode/
+
 # SageMath parsed files
 *.sage.py
 
@@ -162,5 +165,5 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-models/
-data/
+/models
+/data
