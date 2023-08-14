@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: webcat  
-          image: cr.yandex/crp9hl1drtajjgkmmbvc/webcat:0.0.2
+          image: cr.yandex/crp9hl1drtajjgkmmbvc/webcat:0.0.3
           # image: nginx
           ports:
             - containerPort: 8080
