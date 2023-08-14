@@ -6,7 +6,7 @@ from sklearn.pipeline import Pipeline
 
 class MyIpModel:
     pipeline: Pipeline | None = None
-    # ip: str | None = None
+    ip: str | None = None
 
 
 class PastebinModel:
