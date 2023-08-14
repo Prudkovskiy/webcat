@@ -33,8 +33,8 @@ app = FastAPI()
 
 @app.on_event("startup")
 async def load_model():
-    # response = await process_url("https://www.wikipedia.org", use_proxy=False)
-    # MyIpModel.ip = response.headers.get("X-Client-IP")
+    response = await process_url("https://www.wikipedia.org", use_proxy=False)
+    MyIpModel.ip = response.headers.get("X-Client-IP")
     MyIpModel.pipeline = load("myip_url.joblib", path=MODEL_MYIP_URL_PATH)
 
     filepath = "models/pastebin_models/"
@@ -83,7 +83,7 @@ async def check_myip(uri: str):
         parser = etree.HTMLParser(encoding="utf-8")
         tree = etree.parse(BytesIO(response.text.encode()), parser)
         text = clean_html(tree)
-        if response.myip in text:
+        if MyIpModel.ip in text:
             return {"probability": 1, "check_in_content": True}
 
     data = [remove_tld(uri)]

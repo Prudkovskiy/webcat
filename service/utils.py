@@ -46,11 +46,11 @@ async def process_url(url: str, use_proxy: bool = True):
         response = await session.get(url, headers={"User-Agent": USER_AGENT})
         response.raise_for_status()
         response.encoding = "utf-8"
-        response.myip = (
-            response.extensions["network_stream"]
-            .get_extra_info("socket")
-            .getpeername()[0]
-        )
+        # response.myip = (
+        #     response.extensions["network_stream"]
+        #     .get_extra_info("socket")
+        #     .getpeername()[0]
+        # )
         return response
 
 
