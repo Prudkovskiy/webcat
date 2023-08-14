@@ -1,22 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: webcat
   namespace: webcat
   labels:
-    app: nginx
+    app: webcat
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: webcat
   template:
     metadata:
       labels:
-        app: nginx
+        app: webcat
     spec:
       containers:
-      - name: nginx
-        image: nginx:1.14.2
-        ports:
-        - containerPort: 80
+        - name: webcat  
+          image: cr.yandex/crp9hl1drtajjgkmmbvc/webcat:0.0.2
+          # image: nginx
+          ports:
+            - containerPort: 8080

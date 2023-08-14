@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: webcat-ingress
+  namespace: webcat
+  annotations:
+    kubernetes.io/ingress.class: nginx
+spec:
+  rules:
+  - host: webcat.k8s.prudkovskiy
+    http:
+      paths:
+        - pathType: Prefix
+          path: /
+          backend:
+            service:
+              name: webcat-service
+              port:
+                name: http
