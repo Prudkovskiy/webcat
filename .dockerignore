@@ -1,0 +1,9 @@
+/notebooks
+/tests
+*.md
+.git
+.gitignore
+.venv
+.vscode
+.dvc
+/data
