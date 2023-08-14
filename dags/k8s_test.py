@@ -19,7 +19,10 @@ with DAG(
         arguments=["sleep 10"],
         labels={"foo": "bar"},
         task_id="dry_run_demo",
-        is_delte_operator_pod=False,
+        is_delete_operator_pod=False,
         do_xcom_push=True,
         # config_file='/'
     )
+
+if __name__ == "__main__":
+    dag.test()
