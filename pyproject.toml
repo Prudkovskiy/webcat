@@ -30,6 +30,7 @@ uvicorn = "^0.22.0"
 tldextract = "^3.4.4"
 apache-airflow = "^2.6.3"
 apache-airflow-providers-cncf-kubernetes = "^7.4.2"
+lxml = "^4.9.3"
 
 
 [build-system]
