@@ -6,7 +6,7 @@ metadata:
   labels:
     app: webcat
 spec:
-  # type: NodePort
+  type: NodePort
   selector:
     app: webcat
   ports:
