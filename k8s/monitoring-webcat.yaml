@@ -1,0 +1,22 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  namespace: webcat
+  labels:
+    release: monitoring
+  name: webcat
+spec:
+  endpoints:
+
+  - path: /metrics
+    port: webcat
+    scheme: http
+    interval: 60s
+
+  jobLabel: webcat
+  namespaceSelector:
+    matchNames:
+    - webcat
+  selector:
+    matchLabels:
+      app: webcat
