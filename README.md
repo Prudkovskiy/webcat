@@ -7,11 +7,6 @@ Project Organization
 ------------
 
     ├── README.md          <- The top-level README for developers using this project.
-    ├── data
-    │   ├── external       <- Data from third party sources.
-    │   ├── interim        <- Intermediate data that has been transformed.
-    │   ├── processed      <- The final, canonical data sets for modeling.
-    │   └── raw            <- The original, immutable data dump.
     │
     ├── models             <- Trained and serialized models, model predictions, or model summaries
     │
@@ -60,3 +55,16 @@ $ dvc remote modify --local mls3 access_key_id '<key>'
 $ dvc remote modify --local mls3 secret_access_key '<secret_key>'
 $ dvc pull
 ```
+
+what has been done
+---
+1. service on FastApi
+2. container registry in yc
+3. app's instance in kube
+4. object storage s3 with 12Gb data on it
+5. dvc for versioning models and data
+
+what is planned to be done
+---
+1. model retraining pipeline in Airflow
+2. monitoring in grafana
